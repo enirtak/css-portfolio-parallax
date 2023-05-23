@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Ysabeau&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    color: #777;
+    font-family: 'Ysabeau', sans-serif;
+}
+
+/* Common Styles Start */
+.p-15 {
+    padding: 15px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+.header {
+    letter-spacing: 10px;
+    color: #000;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-family: 'Lora', serif;
+}
+
+.caption {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #000;
+}
+
+.caption-border {
+    background-color: #111;
+    color: #fff;
+    padding: 18px;
+    font-size: 20px;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+}
+
+/* Flex */
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.column {
+    width: 50%;
+    float: left;
+    padding: 10px;
+}
+
+.hr {
+    border-bottom: 5px solid #808080;
+    width: 100%;
+}
+/* Common Styles End */
+
+.div-main, .div-projects, .div-work, .div-contact {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.div-about, .div-tech-skills, .div-soft-skills {
+    padding: 50px 80px;
+}
+
+/* Main section */
+.div-main {
+    background-image: url("images/2.jpg");
+    min-height: 100%;
+}
+
+/* Projects */
+.div-projects {
+    background-image: url("images/3.jpg");
+    min-height: 400px;
+}
+
+.div-projects ul, .contact-info ul {
+    list-style-type: none;
+    overflow: hidden;
+}
+
+.div-projects li, .contact-info li {
+    display: inline-block;
+    margin: 5px 0;
+    padding: 10px 20px;
+    border-radius: 2px;
+}
+
+.div-projects li {
+    background-color: #777;
+    color: white;
+}
+
+.div-projects li:hover {
+    background-color: #414040;
+    cursor: pointer;
+}
+
+.div-projects a, .contact-info a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Work Experience section */
+.div-work {
+    background-image: url("images/6.jpg");
+    min-height: 100%;
+}
+
+.work-list {
+    padding: 20px 0;
+    text-align: start;
+}
+
+.work-list ul {
+    list-style-position: inside;
+    margin: 10px;
+}
+
+/* Contact Me section */
+.div-contact {
+    background-image: url("images/1.png");
+    min-height: 100%;
+}
+
+.contact-form {
+    padding: 20px 0;
+    text-align: start;
+}
+
+.contact-form label {
+    display: inline-block;
+}
+
+.contact-form input[type="text"], button, textarea {
+    width: 100%;
+    display: block;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.contact-form textarea {
+    resize: none;
+}
+
+.contact-form input[type="text"], label {
+    margin: 5px 0;
+}
+
+.contact-form button {
+    margin-top: 10px;
+}
+
+.contact-form button:hover {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.contact-info li {
+    background-color: #777;
+    color: white;
+    width: 150px;
+    margin: 10px 0;
+}
+
+.contact-info li:hover {
+    background-color: #414040;
+    cursor: pointer;
+}
+
+/* Mobile */
+@media only screen and (max-device-width: 1024px) {
+    .div-main, .div-projects, .div-work, .div-contact {
+        background-attachment: scroll;
+    }
+
+    .column {
+        width: 100%;
+    }
+
+    .work-list li {
+        text-align: justify;
+    }
+
+    .contact-info li {
+        display: block;
+        width: 100%;
+    }
+}
